@@ -637,6 +637,60 @@
       .footer-inner { flex-direction: column; gap: 32px; }
       .footer-bottom { flex-direction: column; text-align: center; }
     }
+    /* ── Screenshots ── */
+    .screenshots {
+      padding: 110px 0 0;
+      overflow: hidden;
+    }
+    .screenshots-header {
+      margin-bottom: 56px;
+    }
+    .screenshots-scroll {
+      width: 100%;
+      overflow-x: auto;
+      padding-bottom: 40px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .screenshots-scroll::-webkit-scrollbar { display: none; }
+    .screenshots-track {
+      display: flex;
+      gap: 20px;
+      padding: 20px 48px 20px;
+      width: max-content;
+    }
+    .screenshot-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+    .screenshot-frame {
+      width: 200px;
+      border-radius: 32px;
+      border: 2px solid var(--green-border);
+      background: #000;
+      overflow: hidden;
+      box-shadow: 0 24px 48px rgba(0,0,0,0.5), 0 0 30px rgba(16,185,129,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .screenshot-frame:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 40px 60px rgba(0,0,0,0.6), 0 0 40px rgba(16,185,129,0.2);
+      border-color: var(--green);
+    }
+    .screenshot-frame img {
+      width: 100%;
+      display: block;
+      border-radius: 30px;
+    }
+    .screenshot-label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text2);
+      letter-spacing: 0.3px;
+    }
+
     /* ── Phone mockup ── */
     .phone-mockup {
       position: relative;
@@ -790,6 +844,69 @@
           <div class="feature-icon">💪</div>
           <div class="feature-title">Personalised Fitness Program</div>
           <p class="feature-desc">TPI movement screening builds a custom 4-week fitness plan for your body. 40+ golf-specific exercises with progress tracking — get stronger, hit it further.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Screenshots ── -->
+  <section class="screenshots">
+    <div class="container">
+      <div class="screenshots-header reveal">
+        <div class="section-eyebrow">See it in action</div>
+        <h2 class="section-title">Everything you need,<br>beautifully designed</h2>
+        <p class="section-sub">Built for golfers who are serious about improvement. Every screen designed to get out of your way and let Ace do the coaching.</p>
+      </div>
+    </div>
+    <div class="screenshots-scroll reveal">
+      <div class="screenshots-track">
+        <div class="screenshot-item">
+          <div class="screenshot-frame">
+            <img src="screen1.png" alt="Stats & Round Tracking" />
+          </div>
+          <div class="screenshot-label">Stats & Rounds</div>
+        </div>
+        <div class="screenshot-item">
+          <div class="screenshot-frame">
+            <img src="screen2.png" alt="Launch Monitor" />
+          </div>
+          <div class="screenshot-label">Launch Monitor</div>
+        </div>
+        <div class="screenshot-item">
+          <div class="screenshot-frame">
+            <img src="screen3.png" alt="Practice Drills" />
+          </div>
+          <div class="screenshot-label">Practice & Drills</div>
+        </div>
+        <div class="screenshot-item">
+          <div class="screenshot-frame">
+            <img src="screen4.png" alt="Live Scorecard" />
+          </div>
+          <div class="screenshot-label">Live Scorecard</div>
+        </div>
+        <div class="screenshot-item">
+          <div class="screenshot-frame">
+            <img src="screen5.png" alt="Ask Ace AI Coach" />
+          </div>
+          <div class="screenshot-label">Ask Ace</div>
+        </div>
+        <div class="screenshot-item">
+          <div class="screenshot-frame">
+            <img src="screen6.png" alt="Fitness & Mental Game" />
+          </div>
+          <div class="screenshot-label">Fitness & Mind</div>
+        </div>
+        <div class="screenshot-item">
+          <div class="screenshot-frame">
+            <img src="screen7.png" alt="Avatar Picker" />
+          </div>
+          <div class="screenshot-label">Personalise Ace</div>
+        </div>
+        <div class="screenshot-item">
+          <div class="screenshot-frame">
+            <img src="screen8.png" alt="Practice Analytics" />
+          </div>
+          <div class="screenshot-label">Practice Analytics</div>
         </div>
       </div>
     </div>
