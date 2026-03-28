@@ -101,21 +101,8 @@
       position: relative;
       overflow: hidden;
     }
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      background-image: url('https://raw.githubusercontent.com/Aussie4811/aigolfpro.app/main/hero-bg.png');
-      background-size: cover;
-      background-position: center top;
-      opacity: 0.18;
-      z-index: 0;
-    }
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom, rgba(6,12,8,0.3) 0%, rgba(6,12,8,0.7) 60%, rgba(6,12,8,1) 100%);
-      z-index: 1;
-    }
+    .hero-bg { display: none; }
+    .hero-overlay { display: none; }
     .hero-content {
       position: relative;
       z-index: 2;
@@ -635,7 +622,7 @@
       from { opacity: 0; transform: translateY(24px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal { opacity: 1; transform: translateY(0); transition: opacity 0.6s ease, transform 0.6s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
     /* ── Responsive ── */
@@ -650,6 +637,50 @@
       .footer-inner { flex-direction: column; gap: 32px; }
       .footer-bottom { flex-direction: column; text-align: center; }
     }
+    /* ── Phone mockup ── */
+    .phone-mockup {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .phone-frame {
+      width: 280px;
+      border-radius: 44px;
+      border: 3px solid var(--green-border);
+      background: #000;
+      box-shadow: 0 40px 80px rgba(0,0,0,0.6), 0 0 60px rgba(16,185,129,0.15);
+      position: relative;
+      overflow: hidden;
+    }
+    .phone-notch {
+      position: absolute;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 6px;
+      background: #000;
+      border-radius: 3px;
+      z-index: 2;
+    }
+    .phone-screen-img {
+      width: 100%;
+      display: block;
+      border-radius: 42px;
+    }
+    .phone-glow {
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      background: radial-gradient(circle, rgba(16,185,129,0.2) 0%, transparent 70%);
+      bottom: -80px;
+      left: 50%;
+      transform: translateX(-50%);
+      pointer-events: none;
+      z-index: -1;
+    }
+
   </style>
 </head>
 <body>
@@ -665,7 +696,7 @@
     <li><a href="#ace">Meet Ace</a></li>
     <li><a href="#pricing">Pricing</a></li>
     <li><a href="#waitlist">Get Early Access</a></li>
-    <li><a href="mailto:support@aigolfpro.app">Contact</a></li>
+    <li><a href="/cdn-cgi/l/email-protection#0c7f797c7c637e784c6d656b63606a7c7e63226d7c7c">Contact</a></li>
   </ul>
   <a href="#waitlist" class="nav-cta">Join Waitlist</a>
 </nav>
@@ -804,22 +835,12 @@
           </div>
         </div>
         <div class="reveal">
-          <div class="ace-card">
-            <div class="ace-header">
-              <div class="ace-avatar-fallback">🏌️</div>
-              <div>
-                <div class="ace-name">Ace</div>
-                <div class="ace-title-tag">AI Golf Professional · PGA Level</div>
-              </div>
-              <div class="ace-online">Online now</div>
+          <div class="phone-mockup">
+            <div class="phone-frame">
+              <div class="phone-notch"></div>
+              <img src="https://raw.githubusercontent.com/Aussie4811/aigolfpro.app/main/hero-bg.png" alt="AI Golf Pro App" class="phone-screen-img" />
             </div>
-            <div class="ace-messages">
-              <div class="ace-msg ace-msg-ace">Your driver spin is 3,200rpm — that's 600rpm too high for your 98mph swing speed. You're losing about 12 yards of carry.</div>
-              <div class="ace-msg ace-msg-user">How do I fix it?</div>
-              <div class="ace-msg ace-msg-ace">Tee the ball higher and move it forward to your left heel. Feel like you're sweeping up through impact. This alone should drop spin to the 2,400–2,600 range.</div>
-              <div class="ace-msg ace-msg-user">Which shaft would help?</div>
-              <div class="ace-msg ace-msg-ace">At 98mph with your tempo, look at the Fujikura Ventus Blue 6S. Low spin profile, mid-high launch — perfect match for your numbers.</div>
-            </div>
+            <div class="phone-glow"></div>
           </div>
         </div>
       </div>
@@ -945,8 +966,8 @@
         <div class="footer-links">
           <h4>Contact</h4>
           <ul>
-            <li><a href="mailto:support@aigolfpro.app">support@aigolfpro.app</a></li>
-            <li><a href="mailto:support@aigolfpro.app">Get Support</a></li>
+            <li><a href="/cdn-cgi/l/email-protection#ec9f999c9c839e98ac8d858b83808a9c9e83c28d9c9c"><span class="__cf_email__" data-cfemail="c6b5b3b6b6a9b4b286a7afa1a9aaa0b6b4a9e8a7b6b6">[email&#160;protected]</span></a></li>
+            <li><a href="/cdn-cgi/l/email-protection#d3a0a6a3a3bca1a793b2bab4bcbfb5a3a1bcfdb2a3a3">Get Support</a></li>
           </ul>
         </div>
       </div>
@@ -955,7 +976,7 @@
         <p>
           <a href="#" onclick="showPage('privacy'); return false;">Privacy</a> ·
           <a href="#" onclick="showPage('terms'); return false;">Terms</a> ·
-          <a href="mailto:support@aigolfpro.app">Contact</a>
+          <a href="/cdn-cgi/l/email-protection#8af9fffafae5f8fecaebe3ede5e6ecfaf8e5a4ebfafa">Contact</a>
         </p>
       </div>
     </div>
@@ -998,13 +1019,13 @@
   <h2>7. Data Sharing</h2>
   <p>We do not sell your personal information. We may share your information with service providers (Supabase, Cloudflare, Anthropic) necessary to operate the Service, or when required by law.</p>
   <h2>8. Your Rights</h2>
-  <p>You have the right to access, correct, or delete your personal information at any time. Contact us at support@aigolfpro.app for any privacy requests.</p>
+  <p>You have the right to access, correct, or delete your personal information at any time. Contact us at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="780b0d0808170a0c3819111f17141e080a1756190808">[email&#160;protected]</a> for any privacy requests.</p>
   <h2>9. Children's Privacy</h2>
   <p>The Service is not directed to children under 13. We do not knowingly collect personal information from children under 13.</p>
   <h2>10. Changes to This Policy</h2>
   <p>We may update this Privacy Policy from time to time. We will notify you of changes by posting the new policy and updating the date above.</p>
   <h2>11. Contact Us</h2>
-  <p>Questions? Email us at <a href="mailto:support@aigolfpro.app" style="color:var(--green)">support@aigolfpro.app</a></p>
+  <p>Questions? Email us at <a href="/cdn-cgi/l/email-protection#5c2f292c2c332e281c3d353b33303a2c2e33723d2c2c" style="color:var(--green)"><span class="__cf_email__" data-cfemail="fe8d8b8e8e918c8abe9f97999192988e8c91d09f8e8e">[email&#160;protected]</span></a></p>
 </div>
 
 <!-- ════ TERMS OF USE ════ -->
@@ -1035,10 +1056,10 @@
   <h2>11. Governing Law</h2>
   <p>These Terms are governed by the laws of Australia.</p>
   <h2>12. Contact</h2>
-  <p>Questions? Email us at <a href="mailto:support@aigolfpro.app" style="color:var(--green)">support@aigolfpro.app</a></p>
+  <p>Questions? Email us at <a href="/cdn-cgi/l/email-protection#eb989e9b9b84999fab8a828c84878d9b9984c58a9b9b" style="color:var(--green)"><span class="__cf_email__" data-cfemail="671412171708151327060e00080b0117150849061717">[email&#160;protected]</span></a></p>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // ── Page routing ──
   function showPage(page) {
     document.getElementById('main-site').style.display = 'none';
@@ -1083,29 +1104,4 @@
     const email = e.target.querySelector('input').value;
     e.target.style.display = 'none';
     document.getElementById('hero-success').style.display = 'block';
-    // TODO: connect to your email service (Mailchimp, ConvertKit, Supabase table, etc.)
-    console.log('Waitlist signup:', email);
-  }
-
-  function submitWaitlistBottom(e) {
-    e.preventDefault();
-    const email = e.target.querySelector('input').value;
-    e.target.style.display = 'none';
-    document.getElementById('bottom-success').style.display = 'block';
-    console.log('Waitlist signup:', email);
-  }
-
-  // ── Scroll reveal ──
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 60);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.08 });
-  reveals.forEach(el => observer.observe(el));
-</script>
-</body>
-</html>
+    // TODO: connect to your email service (Mailchimp, ConvertKit, Supabase table
